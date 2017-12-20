@@ -15,8 +15,15 @@
     ```
     airkiss
     ```
+<<<<<<< HEAD
     
 # How to use elian with aes? (under xxx_elianaes.ko_xxx driver file name)
+=======
+![](img/RESULT_AIRKISS.png)
+
+
+# How to use elian with aes?
+>>>>>>> ls-0.9.4
 1. Set aes 128 encryption first. As below, "1234567812345678" just is aes.
     ```
     iwpriv apcli0 elian aes=1234567812345678 
@@ -40,8 +47,14 @@
     ```
     iwpriv apcli0 elian clear
     ```
+    
+![](img/RESULT_ELIAN_AES.png)
 
+<<<<<<< HEAD
 # How to use elian? (under xxx_elianxxx.ko_xxx driver file name) 
+=======
+# How to use elian? 
+>>>>>>> ls-0.9.4
 1. Start it in 2.4GHz
     ```
     iwpriv apcli0 elian start
@@ -52,7 +65,11 @@
     iwpriv apcli0 elian stop
     ```
 
+<<<<<<< HEAD
 3. Get result 
+=======
+3. Get result
+>>>>>>> ls-0.9.4
     ```
     iwpriv apcli0 elian result
     ```
@@ -61,6 +78,18 @@
     ```
     iwpriv apcli0 elian clear
     ```
+![](img/RESULT_ELIAN.png)
+
+# linkit-smart-EK-7688AMx-feed
+This one fork of linkit-smart-feed's source.
+
+You can just change one step from 4 on Steps to 4+ here.
+ 
+4+. Add the LinkIt Smart EK 7688AMx feed:   
+    ```
+    $ echo src-git linkit https://github.com/NuxNuxLi/linkit-smart-EK-7688AMx-feed.git >> feeds.conf   
+    ```
+Next, you can follow the howto to hang out with elian and airkiss. 
 
 # linkit-smart-EK-7688AMx-feed
 This one fork of linkit-smart-feed's source.
@@ -74,6 +103,8 @@ You can just change one step from 4 on Steps to 4+ here.
 Next, you can follow the howto to hang out with elian and airkiss. 
 # linkit-smart-feed
 This feeds holds the SDK wifi driver and the config/meta package for the LinkIt Smart 7688 (Duo)
+
+**Note**: LinkIt Smart 7688 uses the MediaTek proprietary Wi-Fi driver. While OpenWrt Chaos Calmer is evolving, only selected Linux kernel versions of it are supported by the Wi-Fi driver (3.18.21 ~ 3.18.44). If you are looking for a non-proprietary Wi-Fi driver, the [mt76](https://github.com/openwrt/mt76) project would be a reference of the choice.
 
 # Build the firmware from sources
 
