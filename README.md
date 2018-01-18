@@ -104,7 +104,6 @@ In the Ubuntu system, open the *Terminal* application and type the following com
 
 2. Download OpenWrt CC source codes:
     ```
-    $ ~~git clone git://git.openwrt.org/15.05/openwrt.git~~
 	$ git clone https://github.com/openwrt/chaos_calmer.git openwrt
     ```
     
