@@ -104,7 +104,8 @@ In the Ubuntu system, open the *Terminal* application and type the following com
 
 2. Download OpenWrt CC source codes:
     ```
-    $ git clone git://git.openwrt.org/15.05/openwrt.git
+    $ ~~git clone git://git.openwrt.org/15.05/openwrt.git~~
+	$ git clone https://github.com/openwrt/chaos_calmer.git openwrt
     ```
     
 3. Prepare the default configuration file for feeds:
@@ -131,6 +132,8 @@ In the Ubuntu system, open the *Terminal* application and type the following com
 7. Prepare the kernel configuration to inform OpenWrt that we want to build an firmware for LinkIt Smart 7688:
     
     ```
+	$ make menuconfig
+	$ touch staging_dir/host/.prereq-build
     $ make menuconfig
     ```
     * Select the options as below:
@@ -139,8 +142,9 @@ In the Ubuntu system, open the *Terminal* application and type the following com
         * Target Profile: `LinkIt7688`
     * Save and exit (**use the deafult config file name without changing it**)
 8. Start the compilation process:
-    
+    (ps:copy this_feed/dl/libmraa-0.8.0-70600dece4138b0c0dbaff42f57828f1559cd840.tar.gz to your_source_root/dl) 
     ```
+	$ make download
     $ make V=99
     ```
 9. After the build process completes, the resulted firmware file will be under `bin/ramips/openwrt-ramips-mt7688-LinkIt7688-squashfs-sysupgrade.bin`. Depending on the H/W resources of the host environment, the build process may **take more than 2 hours**.
